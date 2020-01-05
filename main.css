@@ -1,24 +1,111 @@
 html {
-    font-family: sans-serif;
+    padding:4%;
     text-align: center;
+    box-sizing:border-box;
+    font-family: 'Quattrocento', serif;
 }
-header {
-    display:flex;
+.header-flex {
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
+    display:flex;
 }
 h1 {
     margin-left: 5%;
+    font-size:30px;
 }
+
+h2 {
+    font-size:22px;
+}
+
 .headshot > img {
     width: 50px;
     border: solid 2px gray;
     border-radius: 100%;
-    margin-left:5%;
+    margin-left:4%;
 }
 
 ul {
     list-style:none;
+    font-family: 'Quattrocento', serif;
 }
 
+p {
+    font-family:'lato',sans-serif;
+    text-align: left;
+}
+
+
+
+.projects-div{
+    border:2px solid gray;
+    border-radius:4px;
+    margin-bottom:5%;
+    padding:2%;
+}
+
+nav {
+    float:right;
+    width: 120px;
+}
+nav button{
+    float: right;
+}
+
+nav ul{
+    display:none;
+    position: absolute;
+    width: inherit;
+}
+
+nav ul li{
+    float: right;
+    list-style: none;
+}
+
+nav a {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+    display: block;
+    background-color:grey;
+    width:120px;
+  }
+
+nav ul li a:hover, nav button:hover{
+background-color: red;
+}
+
+nav button:hover + #nav-buttons, #nav-buttons:hover{
+    display: block;
+}
+
+
+
+.contact-links {
+    list-style: none;
+    font-family: 'Quattrocento', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left:0px;
+}
+
+
+@media screen and (min-width:520px) {
+/* At this level I want my nav to be displayed as text in a column to the left side of the screen (so maybe wrapped in an aside element? 
+Need to figure out if this means using JQuery to add that element or if i can add it in and just hide it in my smaller screen format.
+Question for mentor, can I hide the aside element, but house my nav bar in it, and still call the drop down in my min size with the nave bar?)*/
+
+.header-flex {
+    display: block;
+}
+
+}
+
+@media screen and (min-width:800px) {
+
+}

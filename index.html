@@ -6,28 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anthony Tamburro</title>
     <link rel="stylesheet" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Quattrocento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
+        <div class='header-flex'>
           <div class='headshot'>
              <img src='images/Anthony-Tamburro.jpg'>
           </div>
         <h1>Anthony Tamburro</h1>
-    </header>
-    <nav>
-        <button class='drop-down-nav'></button>
-            <ul>
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>Contact</li>
+        <nav>
+        <button class='drop-down-nav'><i class ='fa fa-bars'></i></button>
+            <ul id="nav-buttons">
+                <li><a href="#about-me-section">About Me</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
-    </nav>  
-    <section>
+        </nav>  
+        </div>
+    </header>
+    <section id="about-me-section">
         <h2>About Me</h2>
-        <p>about me paragraph</p>
+        <p>Hi, I’m Anthony. I’m a Fullstack Developer and UI/UX design enthusiast.</p>
+   
+        <p>My passion for coding is routed within my love for problem solving and 
+           ability to map out practical solutions to complex problems. I am continuously 
+           practicing and learning new skills and technologies, and I am looking to make 
+           a difference in the world as a Fullstack Developer. I also enjoy spending time 
+           with friends and family, travelling, friendly competition whether it be anything 
+           from a game of Axis and Allies Global 1940 to a game of hockey, enjoying a craft 
+           beer, and playing the guitar.</p>
+            
     </section>
-    <section>
+    <section id="projects-section">
         <h2>Projects</h2>
         <p> Paragraph about my projects, maybe details on current languages being used?</p>
         <div class='projects-div'>
@@ -39,15 +52,39 @@
                 <button type="button" class='button-view-project'>View Project</button>
             </div>
         </div>
+
+        <div class='projects-div'>
+                <h3>Next Project</h3>
+                <img>
+                <p>project description/code used/methods</p>
+                <div class='view-project-options'>
+                    <button type="button" class='button-view-code'>View Code</button>
+                    <button type="button" class='button-view-project'>View Project</button>
+                </div>
+            </div>
+
     </section>
-    <section>
+    <section id="contact-section">
         <h2>Contact</h2>
             <div class='contact-me-layout'>
-                <p>short paragraph about current career goals</p>
-                <ul>
-                    <li>link to GitHub</li>
-                    <li>link to LinkedIn</li>
-                    <li>Link to GMail</li>
+                
+                <p>I am currently working hard to complete the Full Stack Web Development Career 
+                   Path bootcamp at Thinkful. I currently reside within the Greater Toronto Area 
+                   and I am seeking opportunities to either locally or globally build a career in 
+                   Web Development. I strive for efficiency, and can be relied upon as an out-of-the 
+                   box thinker and problem solver in my personal and work life.</p>
+             
+                <p>My interest in technology coincides with a passion for helping organizations and 
+                   individuals grow and succeed in the present and future economical landscape. I 
+                   believe in sustainable development, environmental stewardship, and that the World 
+                   Happiness Report is a much stronger indicator of success versus the standard Gross 
+                   Domestic Product. The ability to analyze, present, and learn from data is going to 
+                   become exponentially more important for solving the problems of the future.</p>
+          
+                <ul class="contact-links">
+                    <li><a href="https://linkedin.com/in/anthony-tamburro-42026b80"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://github.com/anthonytamburro89"><i class="fa fa-github-square"></i></a></li>
+                    <li><a href="mailto:anthonytamburro89@gmail.com?subject=Software Developer Opportunity"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
     </section>
