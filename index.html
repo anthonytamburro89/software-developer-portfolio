@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato|Quattrocento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <header>
@@ -27,6 +29,7 @@
         </nav>  
         </div>
     </header>
+    <main>
     <section id="about-me-section">
         <h2>About Me</h2>
         <p>Hi, I’m Anthony. I’m a Fullstack Developer and UI/UX design enthusiast.</p>
@@ -45,23 +48,25 @@
         <p> Paragraph about my projects, maybe details on current languages being used?</p>
         <div class='projects-div'>
             <h3>Canadian Geography Quiz</h3>
-            <img>
-            <p>project description/code used/methods</p>
+            <div class="projectSlides">
+                <a href="https://anthonytamburro89.github.io/quiz-app/">
+                <img class="imgProjectSlides" src="images\geoQuizImgs\quiz-app-screenshot.PNG"><span class="view-project-hover">View Project</span>
+                </a>
+            </div>     
+            <ul class='languages-used'>
+                <li><i class='fab fa-js-square'></i></li>
+                <li><i class='fab fa-css3'></i></li>
+                <li><i class='fab fa-html5'></i></li>
+            </ul>
             <div class='view-project-options'>
-                <button type="button" class='button-view-code'>View Code</button>
-                <button type="button" class='button-view-project'>View Project</button>
-            </div>
+                <a href="https://github.com/anthonytamburro89/quiz-app">
+                  <button type="button" class='button-view-code'>View Code</button>
+                </a>
+                <a href="https://anthonytamburro89.github.io/quiz-app/">
+                  <button type="button" class='button-view-project'>View Project</button>
+                </a>
+              </div>
         </div>
-
-        <div class='projects-div'>
-                <h3>Next Project</h3>
-                <img>
-                <p>project description/code used/methods</p>
-                <div class='view-project-options'>
-                    <button type="button" class='button-view-code'>View Code</button>
-                    <button type="button" class='button-view-project'>View Project</button>
-                </div>
-            </div>
 
     </section>
     <section id="contact-section">
@@ -91,5 +96,8 @@
     <footer>
         <p>© Anthony Tamburro 2019</p>
     </footer>
+    </main>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
 </html>

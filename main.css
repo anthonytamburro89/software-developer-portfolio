@@ -4,6 +4,14 @@ html {
     box-sizing:border-box;
     font-family: 'Quattrocento', serif;
 }
+
+body {
+    display: grid;
+    grid-template-areas: 
+      "header"
+      "main";
+  }
+
 .header-flex {
     flex-direction:row;
     justify-content:space-between;
@@ -36,13 +44,27 @@ p {
     text-align: left;
 }
 
+.languages-used{
+    list-style: none;
+    font-family: 'Quattrocento', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 24px;
+    padding-left:0px;
+    margin-bottom: 1%;
+    margin-left:10px;
+}
 
+.languages-used li{
+    margin-right: 4px;
+}
 
 .projects-div{
     border:2px solid gray;
     border-radius:4px;
     margin-bottom:5%;
-    padding:2%;
+    padding-bottom: 2%;
 }
 
 nav {
@@ -65,7 +87,7 @@ nav ul li{
 }
 
 nav a {
-    font-size: 15px;
+    font-size: 16px;
     color: white;
     text-align: center;
     padding: 10px 0px;
@@ -83,7 +105,40 @@ nav button:hover + #nav-buttons, #nav-buttons:hover{
     display: block;
 }
 
+.projectSlides:hover > a > .view-project-hover{
+    opacity: 1;
+  }
+  
+  .projectSlides:hover .imgProjectSlides {
+    filter: grayscale(100%) blur(2px);
+    cursor: pointer;
+  }
 
+  .view-project-hover {
+    opacity: 0;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.4);
+    font-size: 3em;
+    transition: all .3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.view-project-options{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button{
+    border-radius:4px;
+    background-color:#d2d2d2;
+    border: solid 2px gray;
+}
 
 .contact-links {
     list-style: none;
@@ -92,20 +147,85 @@ nav button:hover + #nav-buttons, #nav-buttons:hover{
     flex-direction: row;
     justify-content: space-evenly;
     padding-left:0px;
+    font-size:24px;
 }
 
-
-@media screen and (min-width:520px) {
-/* At this level I want my nav to be displayed as text in a column to the left side of the screen (so maybe wrapped in an aside element? 
-Need to figure out if this means using JQuery to add that element or if i can add it in and just hide it in my smaller screen format.
-Question for mentor, can I hide the aside element, but house my nav bar in it, and still call the drop down in my min size with the nave bar?)*/
-
-.header-flex {
-    display: block;
+a .view-project-options{
+    text-decoration:none;
+    font-size:18px;
 }
 
+footer p{
+    text-align: center;
+}
+
+/* JQuery DOM related CSS Properties */
+/*hover over icons in li */
+.currentHover {
+    color: red;
+}
+li.currentHover ul {
+    color: black;
+}
+
+/* hover over buttons */
+.currentHoverButton {
+    border: 2px solid white;
+    background-color:red;
+    color: white;
+    cursor:pointer;
+}
+/* image house for slideshow*/
+.projectSlides{
+    width:100%;
+    position: relative
+}
+.projectSlides img{
+    width: 100%;
+    max-width: 800px;
+    transition: all 0.3s ease;
 }
 
 @media screen and (min-width:800px) {
-
+html {
+    padding:2%;
 }
+
+.header-flex {
+    display: block;
+    justify-content: center;
+}
+/*
+body {
+    grid-template-areas: 
+    "header main";
+
+    grid-template-columns: 25% 75%;
+  }
+*/
+header{
+    text-align:center;
+}
+
+button .drop-down-nav{
+    display:none;
+}
+nav{
+    float:none;
+}
+
+p {
+    text-align: center;
+}
+
+.languages-used{
+    margin-left: 10px;
+    font-size: 36px;
+}
+
+.contact-links{
+    font-size:36px;
+    }
+}
+
+
