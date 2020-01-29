@@ -13,31 +13,8 @@ for (let item of anchorlinks) {
     })
 }
 
-/* hover over icons */
-$('li').mouseover(function(e)
-{
-    e.stopPropagation();
-    $(this).addClass('currentHover');
-});
-
-$('li').mouseout(function()
-{
-    $(this).removeClass('currentHover');
-});
-/* hover over buttons */
-
-$('button').mouseover(function(e)
-{
-    e.stopPropagation();
-    $(this).addClass('currentHoverButton');
-});
-
-$('button').mouseout(function()
-{
-    $(this).removeClass('currentHoverButton');
-});
-
 /*
+
 I intially tried to make a slide show of images that would rotate over a time period, and on click. I could not get the 
 function to work properly, so I have now just added a static image of my project to the HTML. Notes and code attempet
 for slider are below.

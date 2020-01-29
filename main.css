@@ -5,18 +5,12 @@ html {
     font-family: 'Quattrocento', serif;
 }
 
-body {
-    display: grid;
-    grid-template-areas: 
-      "header"
-      "main";
-  }
-
 .header-flex {
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
     display:flex;
+    border-bottom: 2px solid gray;
 }
 h1 {
     margin-left: 5%;
@@ -97,7 +91,7 @@ nav a {
     width:120px;
   }
 
-nav ul li a:hover, nav button:hover{
+nav ul li a:hover{
 background-color: red;
 }
 
@@ -140,6 +134,13 @@ button{
     border: solid 2px gray;
 }
 
+button:hover{
+    border: 2px solid white;
+    background-color:red;
+    color: white;
+    cursor:pointer;
+}
+
 .contact-links {
     list-style: none;
     font-family: 'Quattrocento', serif;
@@ -148,6 +149,14 @@ button{
     justify-content: space-evenly;
     padding-left:0px;
     font-size:24px;
+}
+
+ul.contact-links li:hover{
+    color: red;
+}
+
+ul.languages-used li:hover{
+    color:red;
 }
 
 a .view-project-options{
@@ -159,23 +168,7 @@ footer p{
     text-align: center;
 }
 
-/* JQuery DOM related CSS Properties */
-/*hover over icons in li */
-.currentHover {
-    color: red;
-}
-li.currentHover ul {
-    color: black;
-}
-
-/* hover over buttons */
-.currentHoverButton {
-    border: 2px solid white;
-    background-color:red;
-    color: white;
-    cursor:pointer;
-}
-/* image house for slideshow*/
+/* image house for Project Showcase*/
 .projectSlides{
     width:100%;
     position: relative
@@ -189,29 +182,59 @@ li.currentHover ul {
 @media screen and (min-width:800px) {
 html {
     padding:2%;
+    display: inline-block;
 }
 
-.header-flex {
-    display: block;
-    justify-content: center;
-}
-/*
-body {
-    grid-template-areas: 
-    "header main";
-
-    grid-template-columns: 25% 75%;
-  }
-*/
 header{
-    text-align:center;
+    float:left;
+    width:25%;
+    border-right: 2px solid gray;
+}
+.header-flex {
+    flex-direction:column;
+    border-bottom:none;
 }
 
-button .drop-down-nav{
-    display:none;
+main{
+    padding-left:2%;
+    float:left;
+    width:75%;
 }
+
+.headshot > img {
+    width: 75%;
+    border: solid 2px gray;
+    border-radius: 10%;
+    margin-left:4%;
+}
+
 nav{
     float:none;
+}
+
+nav button{
+    display: none;
+}
+
+nav ul{
+    display:block;
+}
+
+nav a {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+    display: block;
+    width:120px;
+    background: none;
+  }
+
+nav ul li a:hover{
+background:none;
+color: red;
+font-weight: bold;
 }
 
 p {
