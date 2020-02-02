@@ -35,7 +35,7 @@ ul {
 
 p {
     font-family:'lato',sans-serif;
-    text-align: left;
+    text-align: justify;
 }
 
 .languages-used{
@@ -63,8 +63,8 @@ p {
 
 nav {
     float:right;
-    width: 120px;
-}
+    }
+
 nav button{
     float: right;
 }
@@ -72,7 +72,9 @@ nav button{
 nav ul{
     display:none;
     position: absolute;
-    width: inherit;
+    width: 120px;
+    right:0;
+    margin-top:30px;
 }
 
 nav ul li{
@@ -141,6 +143,22 @@ button:hover{
     cursor:pointer;
 }
 
+/*button-view*/
+.button-view{
+    border: solid 2px gray;
+    padding:4px;
+    text-decoration: none;
+    border-radius:2px;
+    background-color:#d2d2d2;
+}
+
+.button-view:hover{
+    border: 2px solid white;
+    background-color:red;
+    color: white;
+    cursor:pointer;
+}
+
 .contact-links {
     list-style: none;
     font-family: 'Quattrocento', serif;
@@ -183,22 +201,27 @@ footer p{
 html {
     padding:2%;
     display: inline-block;
+    margin-top: 5%;
+    margin-bottom:5%;
 }
 
 header{
     float:left;
     width:25%;
     border-right: 2px solid gray;
+    position: fixed;
 }
 .header-flex {
     flex-direction:column;
     border-bottom:none;
+    height:50%;
 }
 
 main{
-    padding-left:2%;
+    padding-left:4%;
     float:left;
     width:75%;
+    margin-left:25%;
 }
 
 .headshot > img {
@@ -218,6 +241,7 @@ nav button{
 
 nav ul{
     display:block;
+    position:relative;
 }
 
 nav a {
